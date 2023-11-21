@@ -14,3 +14,12 @@ x \vert B \sim \mathcal{N} (\mu, \sigma)
 $$
 
 This is the setting of GDA. However, GMM does not come with the labelling of the categories, meaning that the input is features solely. Therefore, the categories in GMM is treated as the 'hidden variables' of the model and the goal of GMM is finding out these hidden varibales for classifying which cluster does the data belong to. 
+
+
+
+
+
+# References
+- [Andrew Ng CS229 Lecture 14 EM algorithm](https://www.youtube.com/watch?v=rVfZHWTwXSA&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=14)
+- [EM Aklgorithm and how it work](https://www.youtube.com/watch?v=REypj2sy_5U&t=1s)
+- [Gaussian Mixture model Medium post](https://medium.com/swlh/gaussian-mixture-models-gmm-1327a2a62a)
