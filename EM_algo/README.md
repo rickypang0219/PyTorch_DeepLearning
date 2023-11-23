@@ -13,8 +13,12 @@ $$
 x \vert B \sim \mathcal{N} (\mu, \sigma)
 $$
 
-This is the setting of GDA. However, GMM does not come with the labelling of the categories, meaning that the input is features solely. Therefore, the categories in GMM is treated as the 'hidden variables' of the model and the goal of GMM is finding out these hidden varibales for classifying which cluster does the data belong to. 
+This is the setting of GDA. However, GMM does not come with the labelling of the categories, meaning that the input is features solely. Therefore, the categories in GMM is treated as the 'hidden variables' of the model and the goal of GMM is finding out these hidden varibales for classifying which cluster does the data belong to. Therefore, what we are guessing is 
 
+
+$$
+P(z_{i} \vert  ) = \frac{ P(z_{} \vert B ) } { P(x \vert B) P(B) +  P(x \vert A) P(A) } 
+$$
 
 
 
