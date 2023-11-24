@@ -1,7 +1,7 @@
 # Expectation Maximization (EM) Algorithm 
 
 
-## Gaussian Mixture Model (GMM)
+## 1. Gaussian Mixture Model (GMM)
 The Gaussian Mixture Model is an example of generatice algorithm with hidden/latent variable. In generative algorithms we mean that we aim at modelling the distribution $
 P(X | y)$, rather than $P(y | X)$ like usual discriminative algorithms do, for instance, linear and logistic regression. 
 
@@ -28,10 +28,18 @@ where $z_i$ is the hidden variables.
 
 
 
-## Expectation Maximization of GMM 
+## 2. Expectation Maximization 
+
+### 2.1 Evidence of the Lower Bound (ELBO)
+
+### 2.2 Expectation Step
+
+### 2.3 Maximization Step 
 
 
-# References
+
+
+##  References
 - [Andrew Ng CS229 Lecture 14 EM algorithm](https://www.youtube.com/watch?v=rVfZHWTwXSA&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=14)
 - [EM Aklgorithm and how it work](https://www.youtube.com/watch?v=REypj2sy_5U&t=1s)
 - [Gaussian Mixture model Medium post](https://medium.com/swlh/gaussian-mixture-models-gmm-1327a2a62a)
