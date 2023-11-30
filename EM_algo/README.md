@@ -40,13 +40,7 @@ $$
 by the marginalization. Let $Q(z)$ be a distribution over $z$ satisfying $\sum_z Q(z)  = 1$, we consider the following 
 
 
-$$
-\begin{align}
-\log p(x; \theta) &= \log \sum_z p(x, z ; \theta) \\ 
-&= \log \sum_z  Q(z)  \frac{p(x, z ; \theta) }{Q(z)} \\ 
-& \geq  \mathbb{E}_{z \sim Q} \Big \{ \log \frac{p(x, z ; \theta) }{Q(z)} \Big \}
-\end{align} 
-$$
+
 
 where in the last step we use the Jensen inequlity for $\log$ function. The above derivation shows that for a log-likelihood $\log p(x ; \theta)$, there exists a corresponding lower bound for **any** possible distribution $Q(z)$. Therefore, we define the evidence of lower bound (ELBO) as 
 $$
