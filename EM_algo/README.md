@@ -51,7 +51,7 @@ $$
 
 where in the last step we use the Jensen inequlity for $\log$ function. The above derivation shows that for a log-likelihood $\log p(x ; \theta)$, there exists a corresponding lower bound for **any** possible distribution $Q(z)$. Therefore, we define the evidence of lower bound (ELBO) as 
 $$
-\text{ELBO}(x; Q, \theta) = \mathbb{E}_{z \sim Q} \Big \{ \log \frac{p(x, z ; \theta) }{Q(z)} \Big \} , \\ 
+\text{ELBO}(x; Q, \theta) = \mathbb{E}_{z \sim Q} \Big [ \log \frac{p(x, z ; \theta) }{Q(z)} \Big ] , \\ 
 \forall Q, \theta, x , ~ \log p(x;\theta) \geq ELBO(x; Q, \theta).
 $$
 
@@ -59,8 +59,8 @@ In some texts, the ELBO maybe re-written as
 
 $$
 \begin{align}
-\text{ELBO}(x; Q, \theta) &= \mathbb{E}_{z \sim Q} \Big \{ \log \frac{p(x, z ; \theta) }{Q(z)} \Big \} \\ 
- &= \mathbb{E}_{z \sim Q} \Big \{ \log \frac{p(x, z ; \theta) p(z\vert x ; \theta) }{Q(z) p(z\vert x ; \theta)} \Big \} \\ 
+\text{ELBO}(x; Q, \theta) &= \mathbb{E}_{z \sim Q} \Big [ \log \frac{p(x, z ; \theta) }{Q(z)} \Big ] \\ 
+ &= \mathbb{E}_{z \sim Q} \Big [ \log \frac{p(x, z ; \theta) p(z\vert x ; \theta) }{Q(z) p(z\vert x ; \theta)} \Big ] \\ 
 &= E_{z \sim Q} \Big[ \log p(x; \theta) - \log \frac{Q(z)}{p(z \vert x ;\theta)} \Big]  \\ 
 &= \log p(x; \theta) - E_{z \sim Q} \log \frac{Q(z)}{p(z \vert x ;\theta)}   \\ 
 &= \log p(x; \theta) - D_{KL}(Q(z) ~  \Vert ~ p(z \vert x))
