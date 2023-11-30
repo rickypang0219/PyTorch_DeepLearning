@@ -70,7 +70,7 @@ $$
 Having a lower bound is not telling. What we want to have is a tight bound, meaning that the equality hold given $\theta$. One interesting observation of the alternative form of ELBO 
 
 $$
-\log p(x; \theta) - D_{KL}(Q(z) ~  \Vert ~ p(z \vert x))
+\text{ELBO}(x; Q, \theta)  = \log p(x; \theta) - D_{KL}(Q(z) ~  \Vert ~ p(z \vert x))
 $$
 
 is that it consists of the log-likelihood and the KL Divergence term. Because of $D_{KL} \geq 0$, when we are maximizing the log-likelihood, $D_{KL}$ vanishes. Therefore, from the alternative form of ELBO, we can find out $Q(z)$ as 
