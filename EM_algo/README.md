@@ -43,7 +43,7 @@ $$
 \begin{align}
 \log p(x; \theta) &= \log \sum_z p(x, z ; \theta) \\ 
 &= \log \sum_z  Q(z)  \frac{p(x, z ; \theta) }{Q(z)} \\ 
-& \geq  \mathbb{E}_{z \sim Q} \big \{ \log \frac{p(x, z ; \theta) }{Q(z)} \big \}
+& \geq  \mathbb{E}_{z \sim Q} \Big[ \log \frac{p(x, z ; \theta) }{Q(z)} \Big ]
 \end{align} 
 $$
 
