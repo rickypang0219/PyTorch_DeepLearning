@@ -39,6 +39,13 @@ $$
 
 by the marginalization. Let $Q(z)$ be a distribution over $z$ satisfying $\sum_z Q(z)  = 1$, we consider the following 
 
+$$
+\begin{align}
+\log p(x; \theta) &= \log \sum_z p(x, z ; \theta) \\ 
+&= \log \sum_z  Q(z)  \frac{p(x, z ; \theta) }{Q(z)} \\ 
+& \geq  \mathbb{E}_{z \sim Q} \big \{ \log \frac{p(x, z ; \theta) }{Q(z)} \big \}
+\end{align} 
+$$
 
 
 
