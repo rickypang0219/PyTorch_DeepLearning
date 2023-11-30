@@ -61,7 +61,7 @@ $$
 \begin{align}
 \text{ELBO}(x; Q, \theta) &= \mathbb{E}_{z \sim Q} \Big [ \log \frac{p(x, z ; \theta) }{Q(z)} \Big ] \\ 
  &= \mathbb{E}_{z \sim Q} \Big [ \log \frac{p(x, z ; \theta) p(z\vert x ; \theta) }{Q(z) p(z\vert x ; \theta)} \Big ] \\ 
-&= E_{z \sim Q} \Big[ \log p(x; \theta) - \log \frac{Q(z)}{p(z \vert x ;\theta)} \Big]  \\ 
+&= E_{z \sim Q} \Big [ \log p(x; \theta) - \log \frac{Q(z)}{p(z \vert x ;\theta)} \Big ]  \\ 
 &= \log p(x; \theta) - E_{z \sim Q} \log \frac{Q(z)}{p(z \vert x ;\theta)}   \\ 
 &= \log p(x; \theta) - D_{KL}(Q(z) ~  \Vert ~ p(z \vert x))
 \end{align}
