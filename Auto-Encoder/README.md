@@ -34,7 +34,7 @@ $$
 and we call the variational lower bound or the evidence of lower bound (ELBO) as 
 
 $$
-\text{ELBO}(\phi, \theta ; x^{(i)}) = \mathbb{E}_{q_\phi(z \vert x)} \Big[\log P(x^{(i)} \vert z ; \theta)   \Big ]  - D_{KL} ( q_\phi(z \vert x)~  \Vert ~ P(z ; \theta))
+\text{ELBO}(\phi, \theta ; x^{(i)}) = \mathbb{E}_{q_{\phi}(z \vert x)} \Big[\log P(x^{(i)} \vert z ; \theta) \Big]  - D_{KL} ( q_{\phi}(z \vert x)~  \Vert ~ P(z ; \theta))
 $$
 
 Having the definition of ELBO, we can find the corresponding parameters $\phi, \theta$ thats maximizing the log-likelihood by differentiating and optimizing the ELBO. However, using usual gradient estimator like Monte Carlo exhibits a large variance. Therefore, we need an alternative way to approximate the gradient estimator and this is done by reparameterization. 
