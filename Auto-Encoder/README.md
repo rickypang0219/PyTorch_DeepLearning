@@ -16,7 +16,7 @@ $$
 \end{align*}
 $$
 
-Besides, the posterior distribution is also intractable hence we cannot apply EM algorithm to learn the parameters. Instead of finding the true posterior distribution $P(z \vert x ; \theta)$, we propose an recognition model to approximate it by $q_{\phi}(z \vert x)$, where $q_{\phi} (z \vert x)$. In terms of coding theory, we call $q_\phi (z \vert x) $ as an encoder since it generates a distribution over all possible values of code $z$ given a data-point $x$. Similarly, we can define $P(x \vert z)$ as the decoder. 
+Besides, the posterior distribution is also intractable hence we cannot apply EM algorithm to learn the parameters. Instead of finding the true posterior distribution $P(z \vert x ; \theta)$, we propose an recognition model to approximate it by $q_{\phi}(z \vert x)$, where $q_{\phi} (z \vert x)$. In terms of coding theory, we call $q_\phi (z \vert x)$ as an encoder since it generates a distribution over all possible values of code $z$ given a data-point $x$. Similarly, we can define $P(x \vert z)$ as the decoder. 
 
 ## ELBO / Variational Lower Bound 
 When we are dealing with generative models, we use MLE to find the optimal parameters $\theta$ by maxmizing the log-likelihood
