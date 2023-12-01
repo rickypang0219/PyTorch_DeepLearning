@@ -22,19 +22,19 @@ Besides, the posterior distribution is also intractable hence we cannot apply EM
 When we are dealing with generative models, we use MLE to find the optimal parameters $\theta$ by maxmizing the log-likelihood
 
 $$
-\begin{align}
+\begin{align*}
 \log P(x^{(i)} ; \theta ) &= \log \sum_z P(x^{(i)} ,z ; \theta )   \\ 
 &= \log \sum_z q_{\phi} (z \vert x ) \frac{P(x^{(i)}, z ; \theta)}{q_\phi(z \vert x )}  \\ 
 &\geq \mathbb{E}_{q_\phi(z \vert x)} \Big [\log \frac{P(x^{(i)} \vert z ; \theta) P(z ; \theta)}{q_\phi(z \vert x )} \Big ] \\ 
 &= \mathbb{E}_{q_\phi(z \vert x)} \Big [\log P(x^{(i)} \vert z ; \theta)   \Big ] +   \mathbb{E}_{q_\phi(z \vert x)} \Big [ \log \frac{P(z ; \theta)}{q_{\phi}(z \vert x)} \Big ] \\ 
 &= \mathbb{E}_{q_\phi(z \vert x)} \Big [\log P(x^{(i)} \vert z ; \theta)   \Big ]  - D_{KL} ( q_\phi(z \vert x)~  \Vert ~ P(z ; \theta))
-\end{align}
+\end{align*}
 $$
 
 and we call the variational lower bound or the evidence of lower bound (ELBO) as 
 
 $$
-\text{ELBO}(\phi, \theta ; x^{(i)}) = \mathbb{E}_{q_\phi(z \vert x)} \Big [\log P(x^{(i)} \vert z ; \theta)   \Big ]  - D_{KL} ( q_\phi(z \vert x)~  \Vert ~ P(z ; \theta))
+\text{ELBO}(\phi, \theta ; x^{(i)}) = \mathbb{E}_{q_\phi(z \vert x)} \Big[\log P(x^{(i)} \vert z ; \theta)   \Big ]  - D_{KL} ( q_\phi(z \vert x)~  \Vert ~ P(z ; \theta))
 $$
 
 Having the definition of ELBO, we can find the corresponding parameters $\phi, \theta$ thats maximizing the log-likelihood by differentiating and optimizing the ELBO. However, using usual gradient estimator like Monte Carlo exhibits a large variance. Therefore, we need an alternative way to approximate the gradient estimator and this is done by reparameterization. 
