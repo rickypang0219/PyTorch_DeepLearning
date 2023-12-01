@@ -11,8 +11,8 @@ P(x; \theta)$ of the dataset. However, the distribution is **intractable** in mo
 
 $$
 \begin{align*}
-\theta_{MLE} &= \argmax_{\theta} \prod_{i} \sum_{z} P (x^{(i)} ,z  ; \theta) \\ 
-\theta_{MAP} &= \argmax_{\theta} \prod_{i} \sum_z P (x^{(i)} \vert \theta, z ) P(\theta) \\ 
+\theta_{MLE} &= \arg \max_{\theta} \prod_{i} \sum_{z} P (x^{(i)} ,z  ; \theta) \\ 
+\theta_{MAP} &= \arg \max_{\theta} \prod_{i} \sum_z P (x^{(i)} \vert \theta, z ) P(\theta) \\ 
 \end{align*}
 $$
 
