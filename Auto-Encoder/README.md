@@ -43,3 +43,13 @@ Having the definition of ELBO, we can find the corresponding parameters $\phi, \
 ## Reparamterization Trick 
 
 
+
+
+
+# References: 
+1. [A Tutorial on Variational Autoencoders with a Concise Keras Implementation](https://tiao.io/post/tutorial-on-variational-autoencoders-with-a-concise-keras-implementation/)
+2. [Understanding Varitational Auto-Encoders (VAEs)](https://towardsdatascience.com/understanding-variational-autoencoders-vaes-f70510919f73)
+3. [ML Lecture 18: Unsupervised Learning - Deep Generative Model (Part II)](https://www.youtube.com/watch?v=8zomhgKrsmQ)
+
+
+
